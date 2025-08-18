@@ -1,0 +1,12 @@
+1. Create Python virtual environement -> uv venv --python 3.10 .venv
+2. Activate the environement -> source .venv/bin/activate
+3. Install packages using -> uv add requests pandas
+4. Install dependencies -> uv sync --frozen or uv sync 
+5. See libraries and its dependencies -> uv tree
+6. Run Python file using -> uv run <file_name>
+7. Remove Python flask -> uv remove <package_name>
+
+
+1. Create a directroy named src -> mkdir src 
+2. Initialise src directroy using -> touch __init__.py
+
