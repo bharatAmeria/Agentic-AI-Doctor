@@ -1,28 +1,16 @@
 {
-    "data_upload": {
-      "root_dir": "artifacts/raw_data",
-    
-      "local_data_file": "artifacts/data/data.zip",
-      "unzip_dir": "artifacts",
-      "data_path": "artifacts/Train.csv"
+    "DATA INGESTION": {
+      "ZIP FILE": "artifacts/data.zip",
+      "UNZIP DATA": "artifacts/data"
     },
 
-    "data_ingest": {
-      "feature_store": "artifacts/data_ingestion/feature_store/data.csv",
-      "TRAIN_TEST_SPLIT_RATIO": 0.25,
-      "FILE_NAME": "artifacts/data_ingestion/feature_store/data.csv",
-      "TRAIN_FILE_NAME": "artifacts/data_ingestion/ingested/train.csv",
-      "TEST_FILE_NAME": "artifacts/data_ingestion/ingested/test.csv",
-      "TRAIN_LABEL_FILE_NAME": "artifacts/data_ingestion/ingested/y_train.csv",
-      "TEST_LABEL_FILE_NAME": "artifacts/data_ingestion/ingested/y_test.csv"
+    "CONFIG FOR MEMO": {
+      "DATA_PATH" : "artifacts/data",
+      "DB_FAISS_PATH" : "artifacts/vectorstore/db_faiss",
+      "MODEL_NAME" : "sentence-transformers/all-MiniLM-L6-v2"
     },
 
     "model_training": {
-      "TRAIN_FILE_NAME": "artifacts/data_ingestion/ingested/train.csv",
-      "TEST_FILE_NAME": "artifacts/data_ingestion/ingested/test.csv",
-      "TRAIN_LABEL_FILE_NAME": "artifacts/data_ingestion/ingested/y_train.csv",
-      "TEST_LABEL_FILE_NAME": "artifacts/data_ingestion/ingested/y_test.csv",
-      "model": "app/model.pkl"
     }
     
    }

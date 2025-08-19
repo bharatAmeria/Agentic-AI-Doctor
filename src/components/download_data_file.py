@@ -41,18 +41,14 @@ class Ingest_Data:
                                 --overwrite
     """
 
-    def __init__(
-        self,
-        source_url: Optional[str] = None,
-        local_data_file: Optional[str] = None,
-        unzip_dir: Optional[str] = None,
-        overwrite: bool = False,
+    def __init__(self, sourceURL: Optional[str] = None, zipFile: Optional[str] = None, 
+                 unzipData: Optional[str] = None, overwrite: bool = False,
     ):
         try:
-            config = CONFIG.get("data_upload", {})
-            self.source_url = source_url or config.get("source_URL") or os.getenv("source_URL")
-            self.local_data_file = local_data_file or config.get("local_data_file")
-            self.unzip_dir = unzip_dir or config.get("unzip_dir")
+            config = CONFIG.get("DATA INGESTION", {})
+            self.source_url = sourceURL or os.getenv("SOURCE_URL")
+            self.local_data_file = zipFile or config.get("ZIP FILE")
+            self.unzip_dir = unzipData or config.get("UNZIP DATA")
             self.overwrite = overwrite
 
             if not self.source_url or not self.local_data_file or not self.unzip_dir:

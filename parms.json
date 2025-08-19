@@ -1,0 +1,6 @@
+{
+    "PARMS FOR MEMO": {
+      "CHUNK_SIZE": 500,
+      "CHUNK_OVERLAP": 50
+    }
+}
